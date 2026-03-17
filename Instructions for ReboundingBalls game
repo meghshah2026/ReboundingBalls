@@ -1,0 +1,66 @@
+# Rebounding Balls Game
+
+This is a simple **Java/Processing game** where the player controls a paddle to bounce a moving ball and score points. The game keeps track of **lives** and **score**.
+
+---
+
+## Game Overview
+
+- The player controls a **paddle** using the **mouse**.  
+- A **ball** falls from the top of the screen.  
+- When the ball hits the paddle, it **bounces back** and the player earns a point.  
+- If the ball touches the bottom of the screen, the player **loses a life**.  
+- The game ends when the player **runs out of lives**.  
+
+---
+
+## How to Play
+
+1. Press **Space** to start the game.  
+2. Move the paddle using your **mouse**:  
+   - The paddle moves horizontally and is limited to the bottom half of the screen.  
+3. Bounce the **falling ball** using the paddle.  
+4. Score increases by 1 each time the ball hits the paddle.  
+5. You have **3 lives** initially.  
+6. When lives reach **0**, the game stops.  
+   - Press **R** to restart the game and reset lives to 3.  
+
+---
+
+## Controls
+
+- **Mouse**: Move the paddle horizontally.  
+- **Spacebar**: Start the game.  
+- **R key**: Restart the game after Game Over.  
+
+---
+
+## Code Details
+
+- `gamestate` controls which screen is active:
+  - `0` = Welcome screen  
+  - `1` = Game running  
+- `x` and `y` store the **ball’s position**.  
+- `ballSpeedX` and `ballSpeedY` control the **ball’s movement speed**.  
+- The paddle is drawn using `rect()` and the ball is drawn using `ellipse()`.  
+- Collision detection:
+  - Checks if the **ball overlaps the paddle**.  
+  - If it does, the ball **bounces** and the score increases.  
+- Lives are decreased if the ball reaches the **bottom of the screen**.  
+
+---
+
+## How to Run Locally
+
+1. Download this repository.  
+2. Open it in **IntelliJ IDEA** or any Processing-compatible IDE.  
+3. Run the `ReboundingBalls.java` file.  
+4. Use the mouse and keyboard to play.  
+
+---
+
+## Notes
+
+- The ball **randomly changes horizontal speed** after each bounce.  
+- The paddle **cannot leave the bottom half** of the screen.  
+- When Game Over, the ball and paddle **stop moving** until the player presses **R** to restart.  
